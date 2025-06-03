@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalkTrack</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'dashboard')">Dashboard</button>
+            <button class="tab-button" onclick="openTab(event, 'meeting')">Meeting Notes</button>
+            <button class="tab-button" onclick="openTab(event, 'tasks')">Action Items</button>
+        </div><div id="dashboard" class="tab-content active">
+        <h2>Welcome to TalkTrack</h2>
+        <button class="button">Schedule Meeting</button>
+    </div>
+
+    <div id="meeting" class="tab-content">
+        <h2>Meeting Notes</h2>
+        <textarea id="meeting-notes" placeholder="Type meeting notes here..."></textarea>
+        <button class="button" onclick="extractTasks()">Extract Action Items</button>
+    </div>
+
+    <div id="tasks" class="tab-content">
+        <h2>Action Items</h2>
+        <ul id="task-list"></ul>
+        <button class="button">Sync to Trello</button>
+        <button class="button">Sync to Notion</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
